@@ -1,17 +1,15 @@
 body {
     margin: 0;
-    display: block;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-div {
-    display: inline;
-    width: 10px;
-    height: 10px;
-    background-color: aliceblue;
-    border: rgb(53, 44, 44) solid 1px;
+#boxgrid {
+    display: grid;
+    grid-template: repeat(16, 40px) / repeat(16, 40px);
 }
 
-#boxgrid {
-    border-width: 0px;
+div div {
+    display: inline;
+    background-color: aliceblue;
+    border: rgb(53, 44, 44) solid 1px;
 }
