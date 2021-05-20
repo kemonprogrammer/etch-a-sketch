@@ -6,10 +6,18 @@ body {
 #boxgrid {
     display: grid;
     grid-template: repeat(16, 40px) / repeat(16, 40px);
+    /* column-gap: 3px;
+    row-gap: 3px; */
 }
 
-div div {
+#boxgrid div {
     display: inline;
-    background-color: aliceblue;
-    border: rgb(53, 44, 44) solid 1px;
+    background-color: rgb(240, 248, 255);
+    /* border: rgb(53, 44, 44) solid 1px; */
 }
+
+
+/* 
+.visited {
+    background-color: rgb(173, 201, 226);
+} */
