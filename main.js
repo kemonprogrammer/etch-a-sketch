@@ -3,6 +3,16 @@ const button = document.getElementById("resolution");
 
 const gridWidth = 960;
 
+var random = function(number) {
+    // random number from 0 to number
+    return Math.floor(Math.random() * (number + 1));
+}
+
+// var random = function(low, high) {
+//     // random number from low to high
+//     return Math.floor(Math.random() * (high - low + 1)) + low;
+// }
+
 
 var drawCanvas = function(boxesPerSide) {
     for (let i = 1; i <= boxesPerSide; i++) {
@@ -13,12 +23,13 @@ var drawCanvas = function(boxesPerSide) {
             boxGrid.appendChild(box);
 
             box.addEventListener("mouseenter", () => {
-                box.style.backgroundColor = "rgb(173, 201, 226)";
+                box.style.backgroundColor = `hsl(${random(360)}, ${random(100)}%, ${random(100)}%)`;
             });
         }
     }
-    boxGrid.style.display = "grid";
     const boxWidth = gridWidth / boxesPerSide;
+
+    boxGrid.style.display = "grid";
     boxGrid.style.gridTemplate = `repeat(${boxesPerSide}, ${boxWidth}px) / repeat(${boxesPerSide}, ${boxWidth}px)`;
 }
 
@@ -39,8 +50,8 @@ var askResolution = () => {
     drawCanvas(res);
 }
 
-button.addEventListener("click", askResolution);
 
+button.addEventListener("click", askResolution);
 
 
 drawCanvas(16);

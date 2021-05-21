@@ -3,12 +3,6 @@ body {
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-/* #boxgrid {
-    display: grid;
-    grid-template: repeat(16, 40px) / repeat(16, 40px);
-} */
-
 #boxgrid div {
     background-color: rgb(240, 248, 255);
 }
