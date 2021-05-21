@@ -3,15 +3,10 @@ const button = document.getElementById("resolution");
 
 const gridWidth = 960;
 
-var random = function(number) {
+function random(number) {
     // random number from 0 to number
     return Math.floor(Math.random() * (number + 1));
 }
-
-// var random = function(low, high) {
-//     // random number from low to high
-//     return Math.floor(Math.random() * (high - low + 1)) + low;
-// }
 
 
 var drawCanvas = function(boxesPerSide) {
@@ -20,10 +15,20 @@ var drawCanvas = function(boxesPerSide) {
             const box = document.createElement("div");
             box.classList.add("col" + j.toString());
             box.classList.add("row" + i.toString());
+            box.classList.add("l100");
+
             boxGrid.appendChild(box);
 
             box.addEventListener("mouseenter", () => {
-                box.style.backgroundColor = `hsl(${random(360)}, ${random(100)}%, ${random(100)}%)`;
+                let className = String(box.classList);
+                let lightness = +className.slice(className.lastIndexOf("l") + 1, className.length);
+                if (lightness > 0) {
+                    box.classList.remove(`l${lightness}`);
+                    lightness -= 10;
+                    box.classList.add(`l${lightness}`);
+                }
+                // box.style.backgroundColor = `hsl(${random(360)}, ${random(100)}%, ${random(100)}%)`;
+                box.style.backgroundColor = `hsl(0, 0%, ${lightness}%)`;
             });
         }
     }
@@ -41,7 +46,7 @@ var clearCanvas = function() {
 var askResolution = () => {
     const res = prompt("Enter resolution size", "10");
     if (res === null) return;
-    if (res >= 100) {
+    if (res > 100) {
         alert("Number too big, max: 100");
         askResolution();
         return;
