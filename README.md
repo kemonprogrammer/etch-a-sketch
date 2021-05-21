@@ -9,6 +9,6 @@ From: [theodinproject](https://www.theodinproject.com/paths/foundations/courses/
 ## What I learned
 - How to change colors of boxes at runtime
 - How to change HTML classes with DOM and JS
-- How to work CSS grid
+- How to work with CSS grid
 - How to work with HTML dropdown menus
 - How to delete all child nodes of an element
