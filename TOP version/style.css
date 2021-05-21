@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+#boxgrid div {
+    background-color: rgb(240, 248, 255);
+}
