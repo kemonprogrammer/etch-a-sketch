@@ -1,9 +1,10 @@
 const boxGrid = document.getElementById("boxgrid");
 const button = document.getElementById("resolution");
+const colorChooser = document.getElementById("colorChooser");
 
 const gridWidth = 960;
 
-function random(number) {
+var random = function(number) {
     // random number from 0 to number
     return Math.floor(Math.random() * (number + 1));
 }
@@ -20,15 +21,19 @@ var drawCanvas = function(boxesPerSide) {
             boxGrid.appendChild(box);
 
             box.addEventListener("mouseenter", () => {
-                let className = String(box.classList);
-                let lightness = +className.slice(className.lastIndexOf("l") + 1, className.length);
-                if (lightness > 0) {
-                    box.classList.remove(`l${lightness}`);
-                    lightness -= 10;
-                    box.classList.add(`l${lightness}`);
+                if (colorChooser.value === "cl") {
+                    box.style.backgroundColor = `hsl(${random(360)}, ${random(100)}%, ${random(100)}%)`;
+                } else {
+                    // pick lXX for lightness value
+                    let className = String(box.classList);
+                    let lightness = +className.slice(className.lastIndexOf("l") + 1, className.length);
+                    if (lightness > 0) {
+                        box.classList.remove(`l${lightness}`);
+                        lightness -= 10;
+                        box.classList.add(`l${lightness}`);
+                    }
+                    box.style.backgroundColor = `hsl(0, 0%, ${lightness}%)`;
                 }
-                // box.style.backgroundColor = `hsl(${random(360)}, ${random(100)}%, ${random(100)}%)`;
-                box.style.backgroundColor = `hsl(0, 0%, ${lightness}%)`;
             });
         }
     }
