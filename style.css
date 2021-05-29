@@ -1,8 +1,12 @@
 body {
-    margin: 0;
-    font-family: 'Roboto', 'Open Sans', sans-serif;
+  margin: 0;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
 #boxgrid div {
-    background-color: rgb(240, 248, 255);
+  background-color: rgb(240, 248, 255);
+}
+
+#resolutionSlider {
+  width: 960px;
 }

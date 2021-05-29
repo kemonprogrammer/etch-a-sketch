@@ -2,28 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch a sketch</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch a sketch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Etch a sketch</h1>
-    <div id="boxgrid"></div>
-    <button id="resolution">Change resolution</button><br>
-    <label for="colorChooser">Choose Colors</label>
-    <select name="colorColorDropdown" id="colorChooser">
-        <option value="bw">Black and White</option>
-        <option value="cl">Random Colors</option>
-    </select>
+  <h1>Pixel Art</h1>
+  <div id="boxgrid"></div>
+  <label for="colorChooser">Choose Colors</label>
+  <select name="colorColorDropdown" id="colorChooser">
+    <option value="bw">Black and White</option>
+    <option value="cl">Random Colors</option>
+  </select>
+  <label for="resolutionSlider">Change resolution</label><br>
+  <input type="range" min="1" max="64" step="1" name="resolutionSlider" id="resolutionSlider" value="16">
+  <p id="resolutionValue">16</p>
+  <a href="TOP version/index.html">TOP version</a>
 
-
-    <!--
-        Add:
-    - "Resoultion: 16x16", to change grid size, with dropdown menu-->
 </body>
 
 <script src="main.js"></script>
