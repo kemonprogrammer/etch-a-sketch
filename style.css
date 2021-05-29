@@ -8,5 +8,11 @@ body {
 }
 
 #resolutionSlider {
+  -webkit-appearance: none;
   width: 960px;
+  height: 25px;
+  color: blue;
+  background: #5c2f2f;
+  outline: none;
+  opacity: 0.7;
 }
