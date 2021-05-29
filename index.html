@@ -13,14 +13,21 @@
 <body>
   <h1>Pixel Art</h1>
   <div id="boxgrid"></div>
+
   <label for="colorChooser">Choose Colors</label>
   <select name="colorColorDropdown" id="colorChooser">
     <option value="bw">Black and White</option>
     <option value="cl">Random Colors</option>
   </select>
-  <label for="resolutionSlider">Change resolution</label><br>
-  <input type="range" min="1" max="64" step="1" name="resolutionSlider" id="resolutionSlider" value="16">
-  <p id="resolutionValue">16</p>
+  <button id="displayGrid">Display Grid</button>
+  <br>
+
+  <div id="resolutionContainer">
+    <label for="resolutionSlider">Change resolution</label>
+    <input type="range" min="1" max="64" step="1" name="resolutionSlider" id="resolutionSlider" value="16">
+    <p id="resolutionValue">16</p>
+  </div>
+
   <a href="TOP version/index.html">TOP version</a>
 
 </body>

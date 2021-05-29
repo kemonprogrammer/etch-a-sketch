@@ -1,5 +1,6 @@
 const boxGrid = document.getElementById("boxgrid");
 const colorChooser = document.getElementById("colorChooser");
+const displayGrid = document.getElementById("displayGrid");
 const resolutionSlider = document.getElementById("resolutionSlider");
 const resolutionValue = document.getElementById("resolutionValue");
 
@@ -45,11 +46,14 @@ const drawCanvas = function(boxesPerSide) {
   boxGrid.style.gridTemplate = `repeat(${boxesPerSide}, ${boxWidth}px) / repeat(${boxesPerSide}, ${boxWidth}px)`;
 }
 
-var clearCanvas = () => {
+const clearCanvas = () => {
   boxGrid.textContent = "";
   boxGrid.removeAttribute("style");
 }
 
+displayGrid.addEventListener("click", () => {
+  console.log("displayed");
+});
 resolutionSlider.value = "16";
 
 resolutionSlider.oninput = () => {
