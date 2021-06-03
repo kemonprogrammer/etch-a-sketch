@@ -34,7 +34,7 @@ const drawCanvas = function(boxesPerSide) {
       const box = document.createElement("div");
       box.classList.add("col" + j.toString());
       box.classList.add("row" + i.toString());
-      // l100 for lightness 100%
+      // l100 for lightness = 100%
       box.classList.add("l100");
       boxGrid.appendChild(box);
       box.addEventListener("mouseenter", drawBox);
@@ -53,7 +53,11 @@ const clearCanvas = () => {
 
 displayGrid.addEventListener("click", () => {
   console.log("displayed");
+  boxGrid.style.grid
+  boxGrid.style.gridGap = "10px";
 });
+
+
 resolutionSlider.value = "16";
 
 resolutionSlider.oninput = () => {
