@@ -1,6 +1,6 @@
 # Etch a sketch
 
-[LIVE-DEMO](https://kemonprogrammer.github.io/etch-a-sketch/)
+View in the [Live-Demo](https://kemonprogrammer.github.io/etch-a-sketch/)
 
 This is an JS-DOM project where boxes change color when you hover over them
 
