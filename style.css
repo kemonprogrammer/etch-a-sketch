@@ -1,6 +1,49 @@
-body {
+:root {
+  --secondary-color: rgb(236, 241, 239);
+}
+
+* {
   margin: 0;
+  box-sizing: border-box;
   font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+h1 {
+  position: relative;
+  margin: 50px auto 20px 20%;
+}
+
+header {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+p {
+  margin: 1.2em auto;
+}
+
+label {
+  margin: 10em auto;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  margin: 30px auto;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding: 50px 100px;
+  background-color: var(--secondary-color);
 }
 
 #boxgrid div {

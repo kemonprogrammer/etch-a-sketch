@@ -11,25 +11,35 @@
 </head>
 
 <body>
-  <h1>Pixel Art</h1>
-  <div id="boxgrid"></div>
+  <header>
+    <h1>Pixel Art</h1>
+  </header>
+  <div class="body">
+    <main>
+      <div id="boxgrid"></div>
 
-  <label for="colorChooser">Choose Colors</label>
-  <select name="colorColorDropdown" id="colorChooser">
-    <option value="bw">Black and White</option>
-    <option value="cl">Random Colors</option>
-  </select>
-  <button id="displayGrid">Display Grid</button>
-  <br>
+      <div class="colorContainer">
+        <label for="colorChooser">Choose Colors</label>
+        <select name="colorColorDropdown" id="colorChooser">
+        <option value="bw">Black and White</option>
+        <option value="cl">Random Colors</option>
+      </select>
+      </div>
 
-  <div id="resolutionContainer">
-    <label for="resolutionSlider">Change resolution</label>
-    <input type="range" min="1" max="64" step="1" name="resolutionSlider" id="resolutionSlider" value="16">
-    <p id="resolutionValue">16</p>
+      <button id="displayGrid">Display Grid</button>
+      <br>
+
+      <div id="resolutionContainer">
+        <label for="resolutionSlider">Change resolution</label>
+        <input type="range" min="1" max="64" step="1" name="resolutionSlider" id="resolutionSlider" value="16">
+        <p id="resolutionValue">16</p>
+      </div>
+    </main>
   </div>
-
-  <a href="TOP version/index.html">TOP version</a>
-
+  <footer>
+    <a href="TOP version/index.html">TOP version</a>
+    <p>Made by @kemonprogrammer on github from TOP</p>
+  </footer>
 </body>
 
 <script src="main.js"></script>
