@@ -53,8 +53,7 @@ const clearCanvas = () => {
 
 displayGrid.addEventListener("click", () => {
   console.log("displayed");
-  boxGrid.style.grid
-  boxGrid.style.gridGap = "10px";
+  boxGrid.style.gridGap = (boxGrid.style.gridGap == "") ? "2px" : "";
 });
 
 
