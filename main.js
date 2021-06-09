@@ -7,7 +7,7 @@ const resolutionValue = document.getElementById("resolutionValue");
 const gridWidth = 960;
 
 const random = function(number) {
-  // random number from 0 to number
+  /* random number from 0 to number */
   return Math.floor(Math.random() * (number + 1));
 }
 
@@ -16,7 +16,8 @@ const drawBox = e => {
   if (colorChooser.value === "cl") {
     box.style.backgroundColor = `hsl(${random(360)}, ${random(100)}%, ${random(100)}%)`;
   } else {
-    // pick lXX for lightness value
+
+    /* pick lXX for lightness value */
     let className = String(box.classList);
     let lightness = +className.slice(className.lastIndexOf("l") + 1, className.length);
     if (lightness > 0) {
@@ -28,13 +29,16 @@ const drawBox = e => {
   }
 }
 
+
+
 const drawCanvas = function(boxesPerSide) {
   for (let i = 1; i <= boxesPerSide; i++) {
     for (let j = 1; j <= boxesPerSide; j++) {
       const box = document.createElement("div");
       box.classList.add("col" + j.toString());
       box.classList.add("row" + i.toString());
-      // l100 for lightness = 100%
+
+      /* l100 for lightness = 100% */
       box.classList.add("l100");
       boxGrid.appendChild(box);
       box.addEventListener("mouseenter", drawBox);
@@ -60,12 +64,12 @@ displayGrid.addEventListener("click", () => {
 resolutionSlider.value = "16";
 
 resolutionSlider.oninput = () => {
-  // display value while sliding
+  /* display value while sliding */
   resolutionValue.textContent = resolutionSlider.value;
 }
 
 resolutionSlider.onchange = () => {
-  // change grid after mouseup
+  /* change grid after mouseup */
   clearCanvas();
   drawCanvas(resolutionSlider.value);
 }
